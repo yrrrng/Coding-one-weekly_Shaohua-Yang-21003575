@@ -14,4 +14,10 @@ Mimic week six Link:
 
 Mimic week seven Link:
 
-Mimic week eight Link:
+Mimic week eight(1.1) Link:
+
+Mimic week eight(1.2) Link:
+
+Mimic week eight(1.3) Link:
+
+Mimic week eight(1.4) Link:
