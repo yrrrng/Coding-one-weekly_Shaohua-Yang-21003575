@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script>window.onerror = function(error, url, line) {parent.postMessage(["console", "❌ -- [ERROR] -- ❌ -- ⚠️ " + error], "*")};var cl = console.log;console.log = function () {var msg = [...arguments].join();parent.postMessage(["console", msg], "*");  }  </script><script src = "https://mimicproject.com/libs/maximilian.js">
+</script>
+</head>
+<body>
+<script language="javascript" type="text/javascript">
+
+    let maxi = maximilian();
+	let audio = new maxi.maxiAudio();
+    let myOsc = new maxi.maxiOsc();
+    let yangdu = new maxi.maxiSample();
+    let yangboom = new maxi.maxiSample();
+    let yanghorror = new maxi.maxiSample();
+    let yangwea = new maxi.maxiSample();
+    let myClock = new maxi.maxiClock();
+    
+    audio.init();
+    
+    audio.loadSample('in_dream.wav', yangdu);
+    audio.loadSample('hell_bell.wav', yangboom);
+    audio.loadSample('horror_zone1.wav', yanghorror);
+    audio.loadSample('horror_zone2.wav', yangwea);
+    
+    var tempo = 120;
+    var ticks = 2;
+    var yangweapitch = 1.0;
+  
+    myClock.setTempo(tempo);
+    myClock.setTicksPerBeat(ticks);
+    
+    audio.play = function() {
+       
+      myClock.ticker();
+      
+      if (myClock.tick && myClock.playHead % yangweapitch===0) {
+        
+       yanghorror.trigger();
+      
+      } 
+      
+      if(myClock.tick && myClock.playHead + tempo) {
+        
+      yangboom.trigger();
+        
+      }
+        
+      var out = yangdu.play(myOsc.saw(1)) + yangdu.play(myOsc.sinewave(2)) + yangdu.play(myOsc.saw(3)) % yangdu.play(myOsc.saw(-0.5)) + yanghorror.play(-0.1) + myOsc.saw(-5) + myOsc.sinewave(-0.2);
+      
+      return out;
+    }
+    
+</script>
+</body>
+</html>
