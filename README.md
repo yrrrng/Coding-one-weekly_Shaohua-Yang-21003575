@@ -1,6 +1,6 @@
 # Coding-one-weekly_Shaohua-Yang-21003575
 
-Coding one weekly Link
+-Coding one weekly Link
 
 Mimic week one Link:
 
