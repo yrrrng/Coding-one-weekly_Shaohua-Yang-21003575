@@ -6,6 +6,8 @@ Mimic week one Link: https://mimicproject.com/code/23836e3a-b237-3a9e-3e1b-5a951
 
 Mimic week two Link: https://mimicproject.com/code/3e5bf6ef-9f2d-1e11-a611-e9ff7c7f9dc5
 
+https://mimicproject.com/code/9eac0473-187f-7b6f-b20b-91de49d2cfdc
+
 Mimic week three Link: https://mimicproject.com/code/48bc8214-d546-bcc3-f1a0-0c10f1112895
 
 Mimic week four Link: Mandelbrot set(PDF) 
